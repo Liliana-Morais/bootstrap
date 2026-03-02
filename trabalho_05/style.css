@@ -1,0 +1,512 @@
+@font-face {
+  src: url('fontes/Roboto/static/Roboto-Light.ttf');
+  font-weight: light;
+  font-family: "roboto";
+}
+
+@font-face {
+  src: url('fontes/Roboto/static/Roboto-Bold.ttf');
+  font-weight: bold;
+  font-family: "roboto";
+}
+
+@font-face {
+  src: url('fontes/Roboto_Condensed/static/RobotoCondensed-Light.ttf');
+  font-weight: light;
+  font-family: "roboto_condensed";
+}
+
+@font-face {
+  src: url('fontes/Roboto_Condensed/static/RobotoCondensed-Bold.ttf');
+  font-weight: bold;
+  font-family: "roboto_condensed";
+}
+
+@font-face {
+  src: url('fontes/Roboto_Condensed/static/RobotoCondensed-Regular.ttf');
+  font-weight: normal;
+  font-family: "roboto_condensed";
+}
+
+
+:root {
+  --cinza_escuro: #1A1A1A;
+  --cinza: #333333;
+  --cinza_medio: #4D4D4D;
+  --cinza_menus: #232323;
+  --cinza_contactos: #E6E6E6;
+  --vermelho: #CE000F;
+  --branco: #FFFFFF;
+  --preto: #000;
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+header .logotipo {
+  margin-top: 32px;
+  margin-left: 70px;
+  width: 134px;
+  height: auto;
+}
+
+header .menu {
+  margin-top: 32px;
+  margin-right: 32px;
+  width: 55px;
+  height: 37px;
+}
+
+header .carousel-indicators {
+  gap: 25px;
+  z-index: 3;
+  justify-content: flex-end;
+}
+
+header .carousel-indicators button {
+  all: unset;
+  background: none !important;
+  opacity: 1 !important;
+  transform: translateX(100px);
+}
+
+header .carousel-indicators button::before {
+  display: none;
+}
+
+header .carousel-indicators button::after {
+  display: none;
+}
+
+header .carousel-indicators button .banner_selecionado {
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+
+header .carousel-indicators button .banner_por_selecionar {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+}
+
+header .carousel-indicators button.active .banner_selecionado {display: inline-block;}
+
+header .carousel-indicators button.active .banner_por_selecionar {display: none;}
+
+header .carousel-item {position: relative;}
+
+header .carousel-item img {
+  height: 735px;
+  width: 1280px;
+  object-fit: cover;
+}
+
+header .carousel-item .texto-banners {
+  position: absolute;
+  z-index: 2;
+  margin-top: 235px;
+  margin-left: 300px;
+  color: var(--branco);
+  top: 10%;
+}
+
+header .carousel-item .texto-banners h1 {
+  font-family: roboto_condensed;
+  font-weight: bold;
+  font-size: 55px;
+  text-transform: uppercase;
+}
+
+header .carousel-item .texto-banners h2 {
+  font-family: roboto_condensed;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 170px;
+}
+
+
+main .bem_vindo .mundo {
+  width: 815px;
+  height: 763px;
+}
+
+main .bem_vindo .caixa_texto {
+  background-color: var(--branco);
+  width: 617px;
+  height: 473px;
+  margin-top: 140px;
+  transform: translateX(-50px);
+}
+
+main .bem_vindo .caixa_texto h1 {
+  margin-top: 15px;
+  font-family: roboto_condensed;
+  font-weight: bold;
+  font-size: 42px;
+  color: var(--cinza_medio);
+}
+
+main .bem_vindo .caixa_texto p {
+  margin-top: 15px;
+  font-family: roboto;
+  font-weight: light;
+  font-size: 13px;
+  color: var(--cinza);
+}
+
+main .bem_vindo button {
+  transform: translate(220px, 100px);
+  border: none;
+  background-color: transparent;
+  width: 112px;
+  height: 38px;
+}
+
+main .bem_vindo button img.ver_mais_por_selecionar {
+  width: 112px;
+  height: 38px;
+  position: absolute;
+  margin-top: 10px;
+  display: block;
+}
+
+main .bem_vindo button img.ver_mais_hover {
+  display: none;
+  position: absolute;
+  width: 112px;
+  height: 38px;
+  margin-top: 10px;
+}
+
+main .bem_vindo button:hover .ver_mais_por_selecionar {display: none;}
+
+main .bem_vindo button:hover .ver_mais_hover {display: block;}
+
+
+main .container_destaques .galeria_destaques {
+  margin: 0px;
+  display: flex;
+  gap: 0px;
+  padding: 0px;
+}
+
+main .container_destaques .galeria_destaques .banners {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .container_destaques .galeria_destaques .banners::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+main .container_destaques .galeria_destaques .banners .imagem_destaques {
+  display: block;
+  object-fit: cover;
+  width: 640px;
+  height: 460px;
+}
+
+main .container_destaques .galeria_destaques .banners .icones_texto_destaques {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main .container_destaques .galeria_destaques .banners .icones_texto_destaques .texto_destaques {
+  font-family: roboto_condensed;
+  font-weight: bold;
+  font-size: 42px;
+  color: var(--branco);
+  display: block;
+  z-index: 2;
+}
+
+main .container_destaques .galeria_destaques .banners .icones_texto_destaques .icone_destaque {
+  margin-top: 40px;
+  max-width: 150px;
+  z-index: 2;
+}
+
+
+main .precisa_de_ajuda {
+  margin-bottom: 165px;
+}
+
+main .precisa_de_ajuda .ajuda {
+  padding-left: 200px;
+}
+
+main .precisa_de_ajuda .ajuda h3 {
+  margin-top: 142px;
+  font-family: roboto_condensed;
+  font-weight: bold;
+  font-size: 42px;
+  color: var(--cinza_medio);
+}
+
+main .precisa_de_ajuda .ajuda p {
+  margin-top: 23px;
+  font-family: roboto_condensed;
+  font-weight: light;
+  font-size: 27px;
+  color: var(--cinza);
+}
+
+main .precisa_de_ajuda .ajuda .tel {
+  margin-top: 20px;
+  font-family: roboto_condensed;
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--cinza);
+  padding-left: 400px;
+}
+
+main .precisa_de_ajuda .ajuda .numero_tel {
+  margin-left: 7px;
+  font-weight: normal;
+}
+
+main .fale_connosco {
+  padding-right: 200px;
+}
+
+main .fale_connosco button {
+  margin-top: 200px;
+  display: flex;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 192px;
+  height: 48px;
+}
+
+main .fale_connosco button img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+main .fale_connosco button img.fale_connosco_por_selecionar {display: block;}
+
+main .fale_connosco button img.fale_connosco_hover {display: none;}
+
+main .fale_connosco button:hover .fale_connosco_por_selecionar {display: none;}
+
+main .fale_connosco button:hover .fale_connosco_hover {display: block;}
+
+
+main .agente {position: relative;}
+
+main .agente::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+main .agente .banner_agente {
+  max-width: 1280px;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+main .agente .texto_agente {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px 300px;
+  top: 0px;
+  left: 0px;
+}
+
+main .agente .texto_agente h3 {
+  margin-top: 55px;
+  font-family: roboto_condensed;
+  font-weight: bold;
+  font-size: 42px;
+  color: var(--branco);
+}
+
+main .agente .texto_agente p {
+  margin-top: 15px;
+  font-family: roboto_condensed;
+  font-weight: light;
+  font-size: 25px;
+  color: var(--branco);
+}
+
+main .agente .texto_agente button {
+  margin-top: 40px;
+  display: flex;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 154px;
+  height: 48px;
+}
+
+main .agente .texto_agente button img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+main .agente .texto_agente .saber_mais_por_selecionar {display: block;}
+
+main .agente .texto_agente .saber_mais_hover {display: none;}
+
+main .agente .texto_agente button:hover .saber_mais_por_selecionar {display: none;}
+
+main .agente .texto_agente button:hover .saber_mais_hover {display: block;}
+
+
+footer .barra_menus {
+  background-color: var(--cinza_menus);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 135px;
+}
+
+footer .barra_menus .navbar .nav-link {
+  font-family: roboto_condensed;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--branco);
+  margin: 0px 20px;
+}
+
+footer .barra_menus .navbar .home {color: red;}
+
+footer .barra_menus .navbar .nav-link:hover {color: red;}
+
+
+footer .rodape {
+  height: 245px;
+  background-color: var(--cinza_escuro);
+}
+
+footer .rodape .rodape_1 {
+  height: 85px;
+  margin-top: 40px;
+}
+
+footer .rodape .rodape_1 h4 {
+  font-family: roboto_condensed;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--branco);
+}
+
+footer .rodape .rodape_1 .facebook img,
+footer .rodape .rodape_1 .instagram img,
+footer .rodape .rodape_1 .linkedin img {
+  width: 50px;
+  height: 50px;
+}
+
+footer .rodape .rodape_1 .facebook img {margin-left: 30px;}
+
+footer .rodape .rodape_1 .instagram,
+footer .rodape .rodape_1 .linkedin {
+  margin-left: 22px;
+}
+
+footer .rodape .rodape_1 .facebook .facebook_por_selecionar,
+footer .rodape .rodape_1 .instagram .insta_por_selecionar,
+footer .rodape .rodape_1 .linkedin .linkedin_por_selecionar {
+  display: block;
+}
+
+footer .rodape .rodape_1 .facebook .facebook_hover,
+footer .rodape .rodape_1 .instagram .insta_hover,
+footer .rodape .rodape_1 .linkedin .linkedin_hover {
+  display: none;
+}
+
+footer .rodape .rodape_1 .facebook:hover .facebook_por_selecionar,
+footer .rodape .rodape_1 .instagram:hover .insta_por_selecionar,
+footer .rodape .rodape_1 .linkedin:hover .linkedin_por_selecionar {
+  display: none;
+}
+
+footer .rodape .rodape_1 .facebook:hover .facebook_hover,
+footer .rodape .rodape_1 .instagram:hover .insta_hover,
+footer .rodape .rodape_1 .linkedin:hover .linkedin_hover {
+  display: block;
+  cursor: pointer;
+}
+
+footer .rodape .rodape_1 .linha_separadora {
+  width: 1px;
+  height: 85px;
+  background-color: var(--cinza_medio);
+  margin-left: 60px;
+  margin-right: 70px;
+}
+
+footer .rodape .rodape_1 .ralc {
+  width: 150px;
+  height: 35px;
+}
+
+footer .rodape .rodape_1 .lv_reclamacoes {
+  margin-left: 90px;
+  width: 108px;
+  height: 43px;
+}
+
+footer .rodape .rodape_1 .ralc:hover,
+footer .rodape .rodape_1 .lv_reclamacoes:hover {
+  cursor: pointer;
+}
+
+
+footer .rodape .copyright {
+  padding-top: 25px;
+  padding-bottom: 60px;
+  font-family: roboto_condensed;
+  font-weight: normal;
+  font-size: 15px;
+  color: var(--branco);
+  background-color: var(--cinza_escuro);
+}
+
+
+footer .rodape .copyright p .politica:hover {cursor: pointer;}
